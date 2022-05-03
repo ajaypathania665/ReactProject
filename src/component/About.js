@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 
+// import React , {useState}from 'react'
 export default function About() {
 
  const [myStyle, setMyStyle] = useState({
  color : 'white',
-backgroundColor : 'black'
+ backgroundColor : 'black'
  })
   const [myButton, setMyButton] = useState("Enable light mode")
 
@@ -82,9 +83,5 @@ backgroundColor : 'black'
   
         </div>
  </div>
-
-
-
-   
-  )
+)
 }

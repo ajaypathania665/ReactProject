@@ -1,4 +1,5 @@
 import React , {useState}from 'react'
+import Alert from 'react'
 //  use state in the react import line 
 export default function TextForm(props) {
 
@@ -6,10 +7,12 @@ export default function TextForm(props) {
   
   const  handleUpClick =() =>{
 
-//  setText("Uppercased was clicked"+text);
+//  setText("Uppercased was clicked"+text);/
+
 //  console.log("Hi i am uppercase function" + text);
  let newText = text.toUpperCase();
    setText(newText);
+     props.showalert("converted to uppercase","Success");
 //  with this line text value add to the string someonr click on a button
 
     }
@@ -62,7 +65,7 @@ setText(event.target.value);
 
   <div className="addition" style = {{color :props.mode ==='dark'?'white':'black'}} >
     <h3>word count :{text.split(" ").length-1}  and character count is :{text.length} </h3>
-   <h3>Time count for read the text is : {0.08 * text.split(" ").length}</h3>
+   <h3>Time count for read the text is : {0.08 *text.split(" ").length}</h3>
   
   <h1>Preview</h1>
   <h3>{text.length <= 0 ?"Enter some text in the field to preview" :text}</h3>
